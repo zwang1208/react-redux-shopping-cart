@@ -2,3 +2,7 @@ export const SHOW_INVENTORY = 'SHOW_INVENTORY'
 export const ADD_TO_CART = 'ADD_TO_CART'
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 export const CHECKOUT = 'CHECKOUT'
+
+export const ADD_ONE_ITEM = 'ADD_ONE_ITEM'
+export const DECREASE_ONE_ITEM = 'DECREASE_ONE_ITEM'
+export const INPUT_ITEM_NUMBER = 'INPUT_ITEM_NUMBER'

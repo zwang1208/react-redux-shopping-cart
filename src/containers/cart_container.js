@@ -2,8 +2,7 @@ import React, { Component} from 'react'
 import PropTypes from 'prop-types'
 import Cart from '../components/cart'
 import { connect } from 'react-redux'
-import { checkout, removeFromCart } from '../actions/cart_action';
-import { addToCart } from '../actions/products_action'
+import { deleteOne, addOne, checkout, removeFromCart } from '../actions/cart_action';
 import styles from '../css/cart.module.css'
 
 class CartContainer extends Component {
@@ -22,7 +21,7 @@ class CartContainer extends Component {
 
   render(){
 
-    const { products, total, checkout, itemNumber, removeFromCart} = this.props;
+    const { products, total, checkout, itemNumber, removeFromCart, deleteOne, addOne} = this.props;
     const hasProducts = products.length > 0;
     console.log(products)
     return(
@@ -36,6 +35,8 @@ class CartContainer extends Component {
               quantity = {product.quantity}
               imgSrc = {product.imgSrc}
               onRemove = {() => removeFromCart(product.id)}
+              onDelete = {() => deleteOne(product.id)}
+              onAdd = {() => addOne(product.id)}
             />
           </div>
         )) : (
@@ -87,7 +88,8 @@ const mapStateToProps = (state) => productsInCart(state)
 const mapDispatchToProps = {
   checkout,
   removeFromCart,
-  addToCart
+  deleteOne, 
+  addOne
 }
 
 export default connect(

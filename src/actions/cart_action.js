@@ -17,3 +17,17 @@ export const removeFromCart = productId => {
     productId
   })
 }
+
+export const addOne = (productId) => {
+  return ({
+    type: types.ADD_ONE_ITEM,
+    productId
+  })
+}
+
+export const deleteOne = (productId) => {
+  return ({
+    type: types.DECREASE_ONE_ITEM,
+    productId
+  })
+}
