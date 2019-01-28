@@ -41,7 +41,7 @@
     font-size: 18px;
 }
 
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 320px) and (max-width: 1023px) {
     .itemContainer{
         flex-basis:auto;
         flex-grow: 1;

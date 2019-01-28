@@ -38,3 +38,9 @@
     font-size: 18px;
     float: right;
 }
+
+@media (min-width: 1023px){
+    .cartContainer {
+        width: 700px;
+    }
+}
