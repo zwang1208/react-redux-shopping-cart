@@ -1,0 +1,21 @@
+.appContainer {
+    width: 95%;
+    margin: 0 2.5% 0 2.5%;
+}
+.rowc {
+    display: flex;
+}
+.appTitle {
+    margin-left: 10px;
+    border-bottom: solid;
+    border-color: #64C59A;
+}
+
+.appTitle span {
+    margin-left: 2.5%;
+    padding: 2px 60px;
+    background-color: #64C59A;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}

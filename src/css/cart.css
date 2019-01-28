@@ -1,0 +1,24 @@
+.cartContainer {
+    text-align: center;
+    background-color: #64C59A;
+    width: 15%;
+}
+.title {
+    font-size: 30px;
+    color: white;
+    margin-top: 20px;
+}
+.itemAmount {
+    color: white;
+}
+.cartList {
+    background-color: #89D6B8;
+    margin-bottom: 10px;
+}
+.total {
+    text-align: right;
+    color: white;
+}
+.remove {
+    float: right;
+}
