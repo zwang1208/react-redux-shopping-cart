@@ -46,6 +46,22 @@ hr {
     text-align: right;
 }
 
+.emptyCart {
+    margin-right: 20px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.emptyCart button {
+    background:none!important;
+    color:inherit;
+    border:none; 
+    padding:0!important;
+    font: inherit;
+    cursor: pointer;
+}
+
 @media (min-width: 1023px){
     .cartContainer {
         width: 700px;

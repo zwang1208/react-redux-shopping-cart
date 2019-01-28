@@ -43,7 +43,12 @@ class CartContainer extends Component {
         )}</div>
         <div className={styles.cartBottom}>
           <hr align="right" />
-          <p className={styles.total}>Total: &#36;{total}</p>
+          <div className={styles.total}>
+            Total: &#36;{total}
+          </div>
+          <div className={styles.emptyCart}>
+            <button onClick = {() => checkout()}>Empty Cart</button>
+          </div>
           <button
             className={styles.checkoutBtn}
             onClick = {() => checkout()}
