@@ -4,7 +4,7 @@ import Cart from '../components/cart'
 import { connect } from 'react-redux'
 import { checkout, removeFromCart } from '../actions/cart_action';
 import { addToCart } from '../actions/products_action'
-import '../css/cart.css'
+import styles from '../css/cart.module.css'
 
 class CartContainer extends Component {
 
@@ -26,11 +26,11 @@ class CartContainer extends Component {
     const hasProducts = products.length > 0;
     console.log(products)
     return(
-      <div className='cartContainer'>
-        <div className='title'>Shopping Cart</div>
-        <div className='itemAmount'>{`${itemNumber} items`}</div>
+      <div className={styles.cartContainer}>
+        <div className={styles.title}>Shopping Cart</div>
+        <div className={styles.itemAmount}>{`${itemNumber} items`}</div>
         <div>{hasProducts? (products.map(product=>
-          <div className='cartList' key = {product.id}>
+          <div className={styles.cartList} key = {product.id}>
             <Cart 
               price = {product.price}
               quantity = {product.quantity}
@@ -41,8 +41,9 @@ class CartContainer extends Component {
         )) : (
           <em>Please add some products to cart.</em>
         )}</div>
-        <p className='total'>Total: &#36;{total}</p>
+        <p className={styles.total}>Total: &#36;{total}</p>
         <button
+          className={styles.checkoutBtn}
           onClick = {() => checkout()}
           disabled={hasProducts ? '' : 'disabled'}>
           Checkout

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Product from './product';
-import styles from '../css/product.css'
+import styles from '../css/product.module.css'
 
 const ProductItem = ({product, onAddToCartClicked}) => (
-  <div className='itemContainer'>
+  <div className={styles.itemContainer}>
     <Product
       title={product.itemName}
       price={product.price}
@@ -12,7 +12,7 @@ const ProductItem = ({product, onAddToCartClicked}) => (
       imgSrc={product.imgSrc}
       />
     <button
-      className='addButton'
+      className={styles.addButton}
       onClick={onAddToCartClicked}
       disabled={product.quantityRemaining > 0 ? '' : 'disabled'}
       >

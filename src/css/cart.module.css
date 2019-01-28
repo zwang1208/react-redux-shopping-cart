@@ -1,7 +1,6 @@
 .cartContainer {
     text-align: center;
     background-color: #64C59A;
-    width: 15%;
 }
 .title {
     font-size: 30px;
@@ -18,7 +17,24 @@
 .total {
     text-align: right;
     color: white;
+    border-top: solid;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: bold
 }
 .remove {
+    float: right;
+}
+.adjustBtn {
+    margin: 0 10px 0 10px;
+}
+.checkoutBtn {
+    line-height: 30px;
+    padding: 5px 40px;
+    margin: 10px 0;
+    background-color: #89D6B8;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
     float: right;
 }

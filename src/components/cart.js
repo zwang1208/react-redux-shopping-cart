@@ -1,22 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import styles from '../css/cart.module.css'
 
 const Cart = ({price, quantity, imgSrc, onRemove}) => (
       <div>
         <div>
-          <img style={{width: 50}} src={imgSrc} alt=''/>
-          <button>-</button>
+          <img style={{width: 100}} src={imgSrc} alt=''/>
+          <button
+            className={styles.adjustBtn}
+          >-</button>
           {quantity}
           <button
+            className={styles.adjustBtn}
           >+</button>
         </div>
         <div>
           &#64;&#36;{`${price}each = `}&#36;{(price*quantity).toFixed(2)}
           <button
-            className='remove'
+            className={styles.remove}
             onClick = {onRemove}
-          >Remove</button>
+          >Delete</button>
         </div>
       </div>
 )

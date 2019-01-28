@@ -4,6 +4,7 @@
 }
 .rowc {
     display: flex;
+    justify-content: center;
 }
 .appTitle {
     margin-left: 10px;
@@ -18,4 +19,15 @@
     font-size: 40px;
     font-weight: bold;
     color: white;
+}
+.appItem {
+    flex-basis:auto;
+    flex-grow: 1;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    .rowc {
+        display: flex;
+        flex-direction: column;
+    } 
 }
