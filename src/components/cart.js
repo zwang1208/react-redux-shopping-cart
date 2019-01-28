@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../css/cart.module.css'
+import Image from '../containers/img'
+import errorImg from '../static/404.jpg'
 
 const Cart = ({price, quantity, imgSrc, onRemove, onDelete, onAdd}) => (
       <div>
         <div>
-          <img style={{width: 100}} src={imgSrc} alt=''/>
+          <Image 
+            style={{width: 100}}
+            src={imgSrc}
+            fallbackSrc= {errorImg}
+          />
           <button
             onClick={onDelete}
             className={styles.adjustBtn}
