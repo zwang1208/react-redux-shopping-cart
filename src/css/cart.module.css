@@ -15,12 +15,10 @@
     margin-bottom: 10px;
 }
 .total {
-    text-align: right;
     color: white;
-    border-top: solid;
-    margin-left: 40px;
     font-size: 20px;
-    font-weight: bold
+    font-weight: bold;
+    margin-right: 20px;
 }
 .remove {
     float: right;
@@ -31,12 +29,21 @@
 .checkoutBtn {
     line-height: 30px;
     padding: 5px 40px;
-    margin: 10px 0;
-    background-color: #89D6B8;
+    margin: 10px 20px 0 10px;
+    background-color: #C8EDE0;
     border-radius: 10px;
     cursor: pointer;
     font-size: 18px;
-    float: right;
+    font-weight: bold;
+}
+
+hr {
+    border: 1px solid white;
+    width: 85%;
+}
+
+.cartBottom {
+    text-align: right;
 }
 
 @media (min-width: 1023px){

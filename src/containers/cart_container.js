@@ -39,15 +39,18 @@ class CartContainer extends Component {
             />
           </div>
         )) : (
-          <em>Please add some products to cart.</em>
+          <em>Please add some fruits to cart.</em>
         )}</div>
-        <p className={styles.total}>Total: &#36;{total}</p>
-        <button
-          className={styles.checkoutBtn}
-          onClick = {() => checkout()}
-          disabled={hasProducts ? '' : 'disabled'}>
-          Checkout
-        </button>
+        <div className={styles.cartBottom}>
+          <hr align="right" />
+          <p className={styles.total}>Total: &#36;{total}</p>
+          <button
+            className={styles.checkoutBtn}
+            onClick = {() => checkout()}
+            disabled={hasProducts ? '' : 'disabled'}>
+            Confirm Purchase
+          </button>
+        </div>
       </div>
     )
 
