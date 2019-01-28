@@ -22,6 +22,13 @@
 }
 .remove {
     float: right;
+    background:none!important;
+    color:white;
+    border:none; 
+    padding:0!important;
+    font: inherit;
+    cursor: pointer;
+    margin-right: 20px
 }
 .adjustBtn {
     margin: 0 10px 0 10px;
