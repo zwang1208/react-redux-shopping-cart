@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ProductsList from '../components/products_list';
 import ProductItem from '../components/product_item';
 import { connect } from 'react-redux'
-import { showInventory, addToCart } from '../actions/products_action';
+import { showInventory, addToCart, updateProductListAdd } from '../actions/products_action';
 
 class ProductsListContainer extends Component {
   static propTypes = {
@@ -21,6 +21,11 @@ class ProductsListContainer extends Component {
     const { showInventory } = this.props;
     showInventory()
   }
+
+  // componentWillReceiveProps(newProps) {
+  //   console.log(newProps)
+  //   updateProductListAdd()
+  // }
 
   render(){
     const {products, addToCart} = this.props;
@@ -52,7 +57,8 @@ const mapStateToProps = (state) => (
 
 const mapDispatchToProps = {
   showInventory,
-  addToCart
+  addToCart,
+  updateProductListAdd
 }
 export default connect(
   mapStateToProps,

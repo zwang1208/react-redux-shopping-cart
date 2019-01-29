@@ -17,3 +17,25 @@ export const addToCart = productId => {
     productId
   })
 }
+
+export const updateProductListAdd = productId => {
+  return ({
+    type: types.ADD_ONE_ITEM_PRODUCT,
+    productId
+  })
+}
+
+export const updateProductListDecrease = productId => {
+  return ({
+    type: types.DECREASE_ONE_ITEM_PRODUCT,
+    productId
+  })
+}
+
+export const updateProductListDelete = productId => {
+  return ({
+    type: types.AFTER_DELETE_PRODUCT,
+    productId
+  })
+}
+

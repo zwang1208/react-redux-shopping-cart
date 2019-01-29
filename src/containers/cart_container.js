@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Cart from '../components/cart'
 import { connect } from 'react-redux'
 import { deleteOne, addOne, checkout, removeFromCart } from '../actions/cart_action';
+import { updateProductListAdd, updateProductListDecrease, updateProductListDelete } from '../actions/products_action'
 import styles from '../css/cart.module.css'
 
 class CartContainer extends Component {
@@ -24,7 +25,18 @@ class CartContainer extends Component {
 
   render(){
 
-    const { products, total, checkout, itemNumber, removeFromCart, deleteOne, addOne} = this.props;
+    const { 
+      products, 
+      total, 
+      checkout, 
+      itemNumber, 
+      removeFromCart, 
+      deleteOne, 
+      addOne, 
+      updateProductListAdd, 
+      updateProductListDecrease, 
+      updateProductListDelete} = this.props;
+
     const hasProducts = products.length > 0;
     console.log(products)
     return(
@@ -37,9 +49,15 @@ class CartContainer extends Component {
               price = {product.price}
               quantity = {product.quantity}
               imgSrc = {product.imgSrc}
-              onRemove = {() => removeFromCart(product.id)}
-              onDelete = {() => deleteOne(product.id)}
-              onAdd = {() => addOne(product.id)}
+              onRemove = {() => {
+                removeFromCart(product.id)
+                updateProductListDelete(product.id)}}
+              onDelete = {() => {
+                deleteOne(product.id)
+                updateProductListDecrease(product.id)}}
+              onAdd = {() => {
+                addOne(product.id)
+                updateProductListAdd(product.id)}}
             />
           </div>
         )) : (
@@ -92,7 +110,10 @@ const mapDispatchToProps = {
   checkout,
   removeFromCart,
   deleteOne, 
-  addOne
+  addOne,
+  updateProductListAdd,
+  updateProductListDecrease,
+  updateProductListDelete
 }
 
 export default connect(
