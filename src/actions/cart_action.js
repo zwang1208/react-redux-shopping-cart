@@ -1,6 +1,7 @@
 import * as types from '../constants/action_types';
 import _products from '../api/store_items.json'
 
+// cart action creater
 export const checkout = () => {
   let products = _products.map((v, i) => (
     {'id' : i, ...v}
