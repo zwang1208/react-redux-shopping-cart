@@ -20,7 +20,10 @@ class CartContainer extends Component {
     removeFromCart: PropTypes.func.isRequired,
     checkout: PropTypes.func.isRequired,
     addOne: PropTypes.func.isRequired,
-    deleteOne: PropTypes.func.isRequired
+    deleteOne: PropTypes.func.isRequired,
+    updateProductListAdd: PropTypes.func.isRequired, 
+    updateProductListDecrease: PropTypes.func.isRequired, 
+    updateProductListDelete: PropTypes.func.isRequired 
   }
 
   render(){
