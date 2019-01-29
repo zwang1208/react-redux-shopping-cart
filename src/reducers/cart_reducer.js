@@ -21,7 +21,7 @@ const addQuantity = (state = initialState.quantityById, productId) => {
 }
 
 const decreaseQuantity = (state = initialState.quantityById, productId) => {
-  if (state[productId] === 0) {
+  if (state[productId] === 1) {
     delete state[productId];
     return state;
   } 
