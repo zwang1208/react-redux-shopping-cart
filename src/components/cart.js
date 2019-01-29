@@ -36,7 +36,9 @@ Cart.propTypes = {
   price: PropTypes.number,
   quantity: PropTypes.number,
   imgSrc: PropTypes.string,
-  onRemove: PropTypes.func
+  onRemove: PropTypes.func,
+  onDelete: PropTypes.func,
+  onAdd: PropTypes.func,
 }
 
 export default Cart

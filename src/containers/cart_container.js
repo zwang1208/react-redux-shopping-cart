@@ -16,7 +16,10 @@ class CartContainer extends Component {
       imgSrc: PropTypes.string.isRequired
     })).isRequired,
     total: PropTypes.string,
-    removeFromCart: PropTypes.func.isRequired
+    removeFromCart: PropTypes.func.isRequired,
+    checkout: PropTypes.func.isRequired,
+    addOne: PropTypes.func.isRequired,
+    deleteOne: PropTypes.func.isRequired
   }
 
   render(){

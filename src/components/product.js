@@ -21,7 +21,6 @@ const Product = ({price, num, title, imgSrc}) => (
   </div>
 )
 
-
 Product.propTypes = {
   price: PropTypes.number,
   num: PropTypes.number,
