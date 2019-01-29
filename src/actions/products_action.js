@@ -32,10 +32,11 @@ export const updateProductListDecrease = productId => {
   })
 }
 
-export const updateProductListDelete = productId => {
+export const updateProductListDelete = (productId, quantity)  => {
   return ({
     type: types.AFTER_DELETE_PRODUCT,
-    productId
+    productId,
+    quantity
   })
 }
 

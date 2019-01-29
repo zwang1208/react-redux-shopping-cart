@@ -16,15 +16,15 @@ const increaseInventory = (product) => {
   }
 }
 
-const afterDelete =(product) => {
+const afterDelete =(product, quantity) => {
   return {
     ...product,
-    quantityRemaining: product.quantityRemaining
+    quantityRemaining: product.quantityRemaining + quantity
   }
 }
 
 const productsReducer = (state = initialState, action) => {
-  const { productId } = action
+  const { productId, quantity } = action
   switch (action.type) {
     case types.SHOW_INVENTORY:
       return {...action.products}
@@ -46,7 +46,7 @@ const productsReducer = (state = initialState, action) => {
     case types.AFTER_DELETE_PRODUCT:
       return {
         ...state,
-        [productId]: afterDelete(state[productId])
+        [productId]: afterDelete(state[productId], quantity)
       }
     case types.CHECKOUT:
       return {...action.products}
