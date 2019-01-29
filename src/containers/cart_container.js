@@ -52,6 +52,7 @@ class CartContainer extends Component {
               price = {product.price}
               quantity = {product.quantity}
               imgSrc = {product.imgSrc}
+              quantityRemaining = {product.quantityRemaining}
               onRemove = {() => {
                 removeFromCart(product.id)
                 updateProductListDelete(product.id)}}
