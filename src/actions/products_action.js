@@ -1,6 +1,8 @@
 import * as types from '../constants/action_types';
 import _products from '../api/store_items.json'
 
+//product action creater
+
 export const showInventory = () => {
   let products = _products.map((v, i) => (
     {'id' : i, ...v}
@@ -18,7 +20,7 @@ export const addToCart = productId => {
   })
 }
 
-export const updateProductListAdd = productId => {
+export const updateProductListAdd = productId => {   
   return ({
     type: types.ADD_ONE_ITEM_PRODUCT,
     productId

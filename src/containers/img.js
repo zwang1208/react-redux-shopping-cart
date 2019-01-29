@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+//resuable image module
+
 const Image = ({src, fallbackSrc, ...other}) => {
     let element;
     const changeSrc = newSrc => {

@@ -3,7 +3,7 @@ import * as types from '../constants/action_types';
 const initialState = {
   addedIds: [],
   quantityById: {},
-  exceedStock: false
+  //exceedStock: false
 }
 
 const addProduct = (state = initialState.addedIds, productId) => {
@@ -48,12 +48,12 @@ const cartReducer = (state = initialState, action) => {
         ...state,
         quantityById: addQuantity(state.quantityById, action.productId)
       }
-    case types.DECREASE_ONE_ITEM:
+    case types.DECREASE_ONE_ITEM:   
       return {
         ...state,
         quantityById: decreaseQuantity(state.quantityById, action.productId)
       }
-    case types.REMOVE_FROM_CART:
+    case types.REMOVE_FROM_CART:   //delete the item
       return {...state,
         quantityById: removeItem(state.quantityById, action.productId)
       }
